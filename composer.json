@@ -1,0 +1,27 @@
+{
+    "name": "silecust/base-theme",
+    "description": "Bundle for silecust base theme",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Silecust\\BaseTheme\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ashvini",
+            "email": "2662881+cooldude77@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.3",
+        "psr/cache": "^3.0",
+        "symfony/cache": "7.2.*",
+        "symfony/framework-bundle": "7.2.*",
+        "silecust/framework": "dev-master",
+        "twig/extra-bundle": "^2.12|^3.0",
+        "twig/twig": "^v3.18.0"
+    }
+
+}

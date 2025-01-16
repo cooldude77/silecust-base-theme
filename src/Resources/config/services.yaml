@@ -1,0 +1,12 @@
+services:
+  my_custom_class:
+    class: Silecust\AlphaTheme\Services\MyServices
+    public: false
+  Silecust\AlphaTheme\Services\MyServices: '@my_custom_class'
+
+  Silecust\AlphaTheme\EventSubscriber\ThemeEventSubscriber:
+    tags:
+      - { name: kernel.event_subscriber }
+    arguments:
+      - '@my_custom_class'
+      - '@twig'
