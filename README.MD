@@ -14,4 +14,9 @@ composer config repositories.base-theme '{"type": "path", "url": "your theme loc
 composer require silecust/base-theme
 
 ```
-You can use the same script for creating your own theme too, if you have only copies created locally and not hosted on packagist
+You can use the same script for creating your own theme too, if you have only copies created locally and not hosted on packagist. 
+If you want to use symlink
+```
+composer config repositories.base-theme '{"type": "path", "url": "your theme local path","symlink":true}' --file composer.json
+composer require silecust/base-theme
+```
