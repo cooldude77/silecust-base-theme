@@ -4,7 +4,7 @@ services:
     public: false
   Silecust\BaseTheme\Services\MyServices: '@my_custom_class'
 
-  Silecust\BaseTheme\EventSubscriber\ThemeEventSubscriber:
+  Silecust\BaseTheme\EventSubscriber\EventSubscriber:
     tags:
       - { name: kernel.event_subscriber }
     arguments:
