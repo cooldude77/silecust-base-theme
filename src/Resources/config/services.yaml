@@ -1,10 +1,10 @@
 services:
   my_custom_class:
-    class: Silecust\AlphaTheme\Services\MyServices
+    class: Silecust\BaseTheme\Services\MyServices
     public: false
-  Silecust\AlphaTheme\Services\MyServices: '@my_custom_class'
+  Silecust\BaseTheme\Services\MyServices: '@my_custom_class'
 
-  Silecust\AlphaTheme\EventSubscriber\ThemeEventSubscriber:
+  Silecust\BaseTheme\EventSubscriber\ThemeEventSubscriber:
     tags:
       - { name: kernel.event_subscriber }
     arguments:

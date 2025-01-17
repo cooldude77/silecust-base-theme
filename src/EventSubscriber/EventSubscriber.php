@@ -22,7 +22,7 @@ readonly class EventSubscriber implements EventSubscriberInterface
 
     public function twig(TwigPreRenderEvent $event)
     {
-        if ($this->environment->getLoader()->exists("@AlphaTheme/{$event->getView()}"))
+        if ($this->environment->getLoader()->exists("@SilecustBaseTheme/{$event->getView()}"))
             $event->setView('@SilecustBaseTheme/module/web_shop/external/category/web_shop_category_hierarchy.html.twig');
 
     }
