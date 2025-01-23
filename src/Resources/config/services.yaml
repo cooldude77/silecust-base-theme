@@ -1,8 +1,8 @@
 services:
   my_custom_class:
-    class: Silecust\BaseTheme\Services\MyServices
+    class: Silecust\BaseTheme\Service\TestService
     public: false
-  Silecust\BaseTheme\Services\MyServices: '@my_custom_class'
+  Silecust\BaseTheme\Service\TestService: '@my_custom_class'
 
   Silecust\BaseTheme\EventSubscriber\EventSubscriber:
     tags:

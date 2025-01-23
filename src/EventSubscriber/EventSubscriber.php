@@ -3,7 +3,7 @@
 namespace Silecust\BaseTheme\EventSubscriber;
 
 
-use Silecust\BaseTheme\Services\TestService;
+use Silecust\BaseTheme\Service\TestService;
 use Silecust\Framework\Service\Component\Controller\EnhancedAbstractController;
 use Silecust\Framework\Service\Component\Controller\TwigPreRenderEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -23,7 +23,7 @@ readonly class EventSubscriber implements EventSubscriberInterface
     public function twig(TwigPreRenderEvent $event)
     {
         if ($this->environment->getLoader()->exists("@SilecustBaseTheme/{$event->getView()}"))
-            $event->setView('@SilecustBaseTheme/module/web_shop/external/category/web_shop_category_hierarchy.html.twig');
+            $event->setView("@SilecustBaseTheme/{$event->getView()}");
 
     }
 }
